@@ -1,12 +1,87 @@
-# React + Vite
+# WeatherApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+WeatherApp is a full-stack web application that allows users to check real-time weather information for any city. It features a React frontend styled with Tailwind CSS and a Node.js/Express backend that fetches weather data from the Open-Meteo API.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Search for weather by city name
+- Displays temperature, wind speed, and time
+- Responsive UI with background images and icons
+- Error handling for invalid city names and server issues
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+WeatherApp/
+  ├── public/           # Static assets (images, icons)
+  ├── server/           # Express backend
+  │   └── index.js      # API server code
+  ├── src/              # React frontend
+  │   ├── App.jsx       # Main app component
+  │   ├── main.jsx      # React entry point
+  │   └── index.css     # Tailwind CSS import
+  ├── package.json      # Frontend dependencies and scripts
+  ├── vite.config.js    # Vite configuration
+  └── README.md         # Project documentation
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js and npm installed
+
+### Backend Setup
+
+1. Navigate to the `WeatherApp/server` directory:
+   ```sh
+   cd WeatherApp/server
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the backend server:
+   ```sh
+   node index.js
+   ```
+   The server runs on `http://localhost:5000`.
+
+### Frontend Setup
+
+1. Navigate to the `WeatherApp` directory:
+   ```sh
+   cd WeatherApp
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the frontend development server:
+   ```sh
+   npm run dev
+   ```
+   The app runs on `http://localhost:5173` by default.
+
+## Usage
+
+- Enter a city name in the input field and click "Check".
+- Weather details will be displayed below the form.
+- If the city is not found or there is a server error, an error message will appear.
+
+## Technologies Used
+
+- React
+- Tailwind CSS
+- Vite
+- Express
+- Axios
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+**Note:**  
+For development, ensure both the frontend and backend servers are running. The frontend communicates with the
